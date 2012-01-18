@@ -31,10 +31,10 @@
 #end
 
 #uncomment to run the resque recipe
-#require_recipe "resque"
+require_recipe "resque"
 
 #uncomment to run the redis recipe
-# require_recipe "redis"
+require_recipe "redis"
 
 #require_recipe "logrotate"
 #
@@ -55,7 +55,7 @@
 #require_recipe "mysql_administrative_tools"
 
 #uncomment to include the Elasticsearch recipe
-#require_recipe "elasticsearch"
+require_recipe "elasticsearch::non_util"
 
 # To install specific plugins to Elasticsearch see below as an example
 #es_plugin "cloud-aws" do
@@ -67,7 +67,7 @@
 #end
 
 #uncomment to include the newrelic_server_monitoring recipe
-#require_recipe "newrelic_server_monitoring"
+# require_recipe "newrelic_server_monitoring"
 
 #enable contrib modules for a given Postgresql9 database
 #if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
@@ -98,3 +98,5 @@
   # postgresql9_pg_freespacemap "postgres"
   
 #end
+
+require_recipe "imagemagick"
